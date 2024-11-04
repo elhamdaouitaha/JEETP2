@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: SERVICE-CLIENT  # Nom du service
+  cloud:
+    consul:
+      host: localhost     # Hôte où Consul est en cours d'exécution
+      port: 8500          # Port par défaut de Consul
+      discovery:
+        enabled: true     # Activer la découverte de services via Consul
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/Micro_ClientDB?createDatabaseIfNotExist=true
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8088  # Port pour le projet Client

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: SERVICE-VOITURE  # Nom du service
+  cloud:
+    consul:
+      host: localhost     # Hôte où Consul est en cours d'exécution
+      port: 8500          # Port par défaut de Consul
+      discovery:
+        enabled: true     # Activer la découverte de services via Consul
+
+server:
+  port: 8089  # Port pour le projet Voiture
